@@ -3,4 +3,4 @@
 ['remote "gcsremote"']
     url = gs://harsha5192
     projectname = harsha519
-    credentialpath = /full/path/to/service-account.json
+    credentialpath = /home/veryintersting519/we/5/harsha519-dc7d1f02a0f2.json
