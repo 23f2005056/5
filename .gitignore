@@ -87,3 +87,4 @@ mlopsweek1-*.json
 data/iris.csv
 data/iris.csv
 gcp-key.b64.txt
+/data
