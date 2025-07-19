@@ -55,15 +55,15 @@ jobs:
           
           # Test GCS access
           echo "Testing GCS access:"
-          gsutil ls gs://week4_mlops_bucket/ || echo "Warning: Bucket check failed"
+          gsutil ls gs://harsha5192/ || echo "Warning: Bucket check failed"
           
           echo "Running DVC pull in same session..."
           source .venv/bin/activate
           
           # Ensure environment variables are set for this session
           export GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/gcp-key.json
-          export GOOGLE_CLOUD_PROJECT=mlopsweek1
-          export GCLOUD_PROJECT=mlopsweek1
+          export GOOGLE_CLOUD_PROJECT=harsha519
+          export GCLOUD_PROJECT=harsha519
           
           # Alternative: Use gcloud credentials for DVC
           echo "Configuring DVC to use gcloud credentials..."
