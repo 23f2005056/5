@@ -2,11 +2,15 @@ name: Model Sanity Check
 
 on:
   push:
-    branches: [main]
+    branches: [main]   # or any branches you want
+  pull_request:
+    branches: [main]   # optional if you want to trigger on PRs
 
 permissions:
-  pull-requests: write
-  contents: read
+  contents: write         # to allow git push
+  pull-requests: write    # to allow commenting on PRs
+  # Note: contents: write implies push access
+
 
 jobs:
   test:
