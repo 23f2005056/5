@@ -128,14 +128,14 @@ jobs:
           python -m venv .venv
           source .venv/bin/activate
           pip install -U pip
-          pip install continuous-machine-learning
-          # optional: run tests, generate report.md, etc.
+          pip install cml
       
       - name: Comment test results with CML
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           .venv/bin/cml comment create report.md
+
 
 
 
