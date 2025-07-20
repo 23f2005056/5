@@ -120,21 +120,22 @@ jobs:
             *.json
             *.csv
 
-      - name: Setup CML
-        uses: iterative/setup-cml@v2
+      - name: Install CML
+        run: |
+          npm install -g @dvcorg/cml
 
       - name: Set up virtualenv
         run: |
           python -m venv .venv
           source .venv/bin/activate
           pip install -U pip
-          pip install cml
-      
+
       - name: Comment test results with CML
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          .venv/bin/cml comment create report.md
+          cml comment create report.md
+
 
 
 
