@@ -127,8 +127,4 @@ jobs:
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          source .venv/bin/activate
-          cml comment create report.md
-
-this is my orinial one
-update this as per requiremnt
+          .venv/bin/cml comment create report.md
